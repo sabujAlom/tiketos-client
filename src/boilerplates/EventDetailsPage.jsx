@@ -19,7 +19,7 @@ export default async function EventDetailsPage() {
                     className="text-slate-400 hover:text-white"
                     startContent={<FaArrowLeft />}
                 >
-                    Back to Browse
+                    Back to Browser
                 </Button>
             </Link>
 
@@ -35,7 +35,7 @@ export default async function EventDetailsPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent z-1" />
 
                 <span className="absolute top-6 left-6 bg-pink-500 text-white font-extrabold text-xs uppercase tracking-wider px-4 py-2 rounded-full border border-pink-400/20 shadow-lg z-10">
-                    Category
+                    Categorys
                 </span>
             </div>
 
