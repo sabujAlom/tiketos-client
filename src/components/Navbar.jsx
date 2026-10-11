@@ -4,8 +4,10 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaTicketAlt, FaUser, FaSignOutAlt, FaThLarge } from "react-icons/fa";
-import Logo from "./Logo";
+import L
+from "./Logo";
 import ThemeSwitcher from "./ThemeSwitcher";
+import Logo from "./Logo";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -29,13 +31,11 @@ export default function Navbar() {
     alert("Logged Out! (Design Only)");
   };
 
-
-
   const mockUser = {
     name: "Jane Doe",
     email: "jane@example.com",
     role: "attendee",
-    image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"
+    image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde",
   };
 
   return (
@@ -70,8 +70,6 @@ export default function Navbar() {
 
         {/* RIGHT ACTIONS */}
         <div className="flex items-center gap-4">
-
-
           {!isLoggedIn && (
             <div className="flex items-center gap-3">
               <button
@@ -109,8 +107,12 @@ export default function Navbar() {
                     <p className="text-[10px] text-pink-400 font-bold uppercase tracking-wider">
                       {mockUser.role} Account
                     </p>
-                    <p className="font-bold text-white text-sm mt-0.5">{mockUser.name}</p>
-                    <p className="text-[11px] text-slate-400 truncate mt-0.5">{mockUser.email}</p>
+                    <p className="font-bold text-white text-sm mt-0.5">
+                      {mockUser.name}
+                    </p>
+                    <p className="text-[11px] text-slate-400 truncate mt-0.5">
+                      {mockUser.email}
+                    </p>
                   </div>
 
                   {/* Actions */}

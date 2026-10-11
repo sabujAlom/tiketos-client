@@ -5,8 +5,22 @@ import Link from "next/link";
 import { Card, CardHeader, CardContent as CardBody, Input, Button, Label, Form, Select, SelectTrigger, SelectValue, SelectIndicator, SelectPopover, ListBox, ListBoxItem } from "@heroui/react";
 import { FaUser, FaEnvelope, FaLock, FaImage, FaGoogle } from "react-icons/fa";
 import Logo from "@/components/Logo";
+import { useForm } from "react-hook-form";
 
 export default function RegisterPage() {
+     const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm()
+  
+  const onSubmit=()=>{
+
+  }
+
+
+
     return (
        <div>
            <Card className="w-full max-w-lg border border-white/5 bg-slate-950/70 backdrop-blur-xl shadow-2xl p-4 mx-auto">
@@ -20,9 +34,10 @@ export default function RegisterPage() {
                 </p>
             </CardHeader>
             <CardBody className="gap-4">
-                <Form className="space-y-4 w-full">
+                <Form onSubmit={handleSubmit(onSubmit)} className="space-y-4 w-full">
                     <Label htmlFor="name">Full Name</Label>
                     <Input
+                       {...register("name", { required: "Name is Required"})}
                         id="name"
                         placeholder="John Doe"
                         labelPlacement="outside"
