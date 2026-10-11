@@ -15,8 +15,8 @@ export default function RegisterPage() {
     formState: { errors },
   } = useForm()
   
-  const onSubmit=()=>{
-
+  const onSubmit=(data)=>{
+    console.log(data)
   }
 
 
@@ -46,6 +46,7 @@ export default function RegisterPage() {
                     />
                     <Label htmlFor="email">Email Address</Label>
                     <Input
+                    {...register("email", { required: "Email is Required"})}
                         id="email"
                         placeholder="john@example.com"
                         type="email"
@@ -55,6 +56,7 @@ export default function RegisterPage() {
                     />
                     <Label htmlFor="image">Profile Image URL</Label>
                     <Input
+                    {...register("image", { required: "Image is Required"})}
                         id="image"
                         placeholder="https://example.com/avatar.jpg"
                         labelPlacement="outside"
@@ -64,6 +66,7 @@ export default function RegisterPage() {
 
                     <Label htmlFor="password">Password</Label>
                     <Input
+                    {...register("password", { required: "Password is Required", maxLength:12, minLength:6})}
                         id="password"
                         placeholder="••••••••"
                         type="password"
@@ -75,6 +78,7 @@ export default function RegisterPage() {
                     <div className="flex flex-col gap-2 w-full">
                         <Label htmlFor="role" className="text-sm font-semibold text-slate-300">Select Role</Label>
                         <Select
+                        {...register("role", { required: "Role is Required"})}
                             id="role"
                             aria-label="Select Role"
                             placeholder="Select Role"
