@@ -60,6 +60,10 @@ export default function RegisterPage() {
               placeholder="John Doe"
               className="w-full bg-slate-900/50 border-white/10 hover:border-pink-500/50 focus-within:!border-pink-500"
             />
+            {
+              errors.name && <p className="text-red-500">{errors.name.message}</p>
+            }
+
             <Label htmlFor="email">Email Address</Label>
             <Input
               {...register("email", { required: "Email is Required" })}
@@ -68,6 +72,10 @@ export default function RegisterPage() {
               type="email"
               className="w-full bg-slate-900/50 border-white/10 hover:border-pink-500/50 focus-within:!border-pink-500"
             />
+             {
+              errors.email && <p className="text-red-500">{errors.email.message}</p>
+            }
+
             <Label htmlFor="image">Profile Image URL</Label>
             <Input
               {...register("image", { required: "Image is Required" })}
@@ -75,6 +83,10 @@ export default function RegisterPage() {
               placeholder="https://example.com/avatar.jpg"
               className="w-full bg-slate-900/50 border-white/10 hover:border-pink-500/50 focus-within:!border-pink-500"
             />
+             {
+              errors.image && <p className="text-red-500">{errors.image.message}</p>
+            }
+
 
             <Label htmlFor="password">Password</Label>
             <Input
@@ -86,6 +98,9 @@ export default function RegisterPage() {
               type="password"
               className="w-full bg-slate-900/50 border-white/10 hover:border-pink-500/50 focus-within:!border-pink-500"
             />
+             {
+              errors.password && <p className="text-red-500">{errors.password.message}</p>
+            }
 
             <div className="flex flex-col gap-2 w-full">
               <Label
@@ -102,6 +117,9 @@ export default function RegisterPage() {
                 <option value="attendee">Attendee</option>
                 <option value="organizer">Organizer</option>
               </select>
+               {
+              errors.role && <p className="text-red-500">{errors.role.message}</p>
+            }
             </div>
 
             <Button
