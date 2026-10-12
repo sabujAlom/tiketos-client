@@ -21,6 +21,7 @@ import {
 import { FaUser, FaEnvelope, FaLock, FaImage, FaGoogle } from "react-icons/fa";
 import Logo from "@/components/Logo";
 import { useForm } from "react-hook-form";
+import { authClient } from "@/lib/auth-client";
 
 export default function RegisterPage() {
   const {
@@ -30,8 +31,12 @@ export default function RegisterPage() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    const { data: singUpData, error: singUpError } =
+      await authClient.signUp.email({
+        ...data,
+      });
+      console.log(singUpData, singUpError)
   };
 
   return (
@@ -53,8 +58,6 @@ export default function RegisterPage() {
               {...register("name", { required: "Name is Required" })}
               id="name"
               placeholder="John Doe"
-              
-              
               className="w-full bg-slate-900/50 border-white/10 hover:border-pink-500/50 focus-within:!border-pink-500"
             />
             <Label htmlFor="email">Email Address</Label>
@@ -63,7 +66,6 @@ export default function RegisterPage() {
               id="email"
               placeholder="john@example.com"
               type="email"
-              
               className="w-full bg-slate-900/50 border-white/10 hover:border-pink-500/50 focus-within:!border-pink-500"
             />
             <Label htmlFor="image">Profile Image URL</Label>
@@ -71,21 +73,17 @@ export default function RegisterPage() {
               {...register("image", { required: "Image is Required" })}
               id="image"
               placeholder="https://example.com/avatar.jpg"
-   
-             
               className="w-full bg-slate-900/50 border-white/10 hover:border-pink-500/50 focus-within:!border-pink-500"
             />
 
             <Label htmlFor="password">Password</Label>
             <Input
               {...register("password", {
-                required: "Password is Required"
+                required: "Password is Required",
               })}
               id="password"
               placeholder="••••••••"
               type="password"
-             
-              
               className="w-full bg-slate-900/50 border-white/10 hover:border-pink-500/50 focus-within:!border-pink-500"
             />
 
