@@ -15,7 +15,8 @@ export default function Footer() {
             </span>
           </Link>
           <p className="text-slate-400 text-sm leading-relaxed">
-            The next-generation event discovery and seamless ticket booking platform connecting passionate organizers with eager attendees.
+            
+            Discover exciting events and book tickets effortlessly with a modern platform that brings event organizers and enthusiastic attendees together.
           </p>
           <div className="flex gap-4 text-slate-400">
             <a href="#" className="hover:text-pink-500 transition-colors"><FaFacebook size={18} /></a>
@@ -57,7 +58,7 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 border-t border-white/5 mt-12 pt-8 text-center text-slate-500 text-xs">
-        <p>&copy; {new Date().getFullYear()} Ticketo Inc. All rights reserved. Developed by Antigravity AI.</p>
+        <p>&copy; {new Date().getFullYear()} Eventify Inc. All rights reserved. Crafted with ❤️ by Antigravity AI.</p>
       </div>
     </footer>
   );
