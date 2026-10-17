@@ -30,7 +30,7 @@ const Hero = () => {
                 <p
                     className="text-slate-400 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed"
                 >
-                    Ticketo links passionate organizers with eager attendees. Browse local festivals, grand music nights, elite business seminars, and everything in between.
+                    Discover unforgettable experiences with Ticketo, bringing event creators and enthusiastic audiences together. Explore vibrant local festivals, electrifying live concerts, exclusive business conferences, and exciting events for every interest.
                 </p>
 
                 <div
