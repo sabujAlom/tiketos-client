@@ -105,7 +105,6 @@ export default function RegisterPage() {
             <Input
               type="file"
               accept="image/*"
-              onChange={handleImageUpload}
               {...register("image", { required: "Image is Required" })}
               id="image"
               placeholder="https://example.com/avatar.jpg"
