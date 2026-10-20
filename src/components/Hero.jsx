@@ -12,7 +12,7 @@ const Hero = () => {
 
             <div className="max-w-5xl text-center space-y-8">
                 <div
-                    className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-pink-500/30 bg-pink-500/5 text-pink-400 text-xs font-semibold uppercase tracking-wider"
+                    className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-pink-500/30 bg-pink-600/5 text-pink-400 text-xs font-semibold uppercase tracking-wider"
                 >
                     <FaRocket /> Introducing Ticketo v2.0
                 </div>
@@ -21,7 +21,7 @@ const Hero = () => {
                     className="text-5xl md:text-7xl font-extrabold tracking-tight text-white leading-tight"
                 >
                     Discover Premium Events &{" "}
-                    <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-pink-600 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
                         Book Tickets
                     </span>{" "}
                     Seamlessly
