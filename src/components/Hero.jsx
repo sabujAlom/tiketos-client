@@ -16,7 +16,7 @@ const Hero = () => {
                 >
                     <FaRocket /> Introducing Ticketo v3.00
                 </div>
-
+ 
                 <h1
                     className="text-5xl md:text-7xl font-extrabold tracking-tight text-white leading-tight"
                 >

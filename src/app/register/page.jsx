@@ -22,6 +22,8 @@ import { FaUser, FaEnvelope, FaLock, FaImage, FaGoogle } from "react-icons/fa";
 import Logo from "@/components/Logo";
 import { useForm } from "react-hook-form";
 import { authClient } from "@/lib/auth-client";
+import { uploadImage } from "@/utils/uploadimage";
+
 
 export default function RegisterPage() {
   const {
@@ -31,9 +33,12 @@ export default function RegisterPage() {
     formState: { errors },
   } = useForm();
 
-
-
   const onSubmit = async (data) => {
+    //Upload image to imgbb
+    const imageFile = data.image[0];
+    const imageurl = await uploadImage(imageFile);
+    console.log(imageurl);
+
     const { data: singUpData, error: singUpError } =
       await authClient.signUp.email({
         ...data,
@@ -80,8 +85,10 @@ export default function RegisterPage() {
 
             <Label htmlFor="image">Profile Image URL</Label>
             <Input
-              
               {...register("image", { required: "Image is Required" })}
+              type="file"
+              accept="image/*"
+              
               id="image"
               placeholder="https://example.com/avatar.jpg"
               className="w-full bg-slate-900/50 border-white/10 hover:border-pink-500/50 focus-within:!border-pink-500"
