@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import { FaTicketAlt, FaFacebook, FaTwitter, FaInstagram, FaGithub } from "react-icons/fa";
 
@@ -16,7 +17,7 @@ export default function Footer() {
           </Link>
           <p className="text-slate-400 text-sm leading-relaxed">
             
-            Discover exciting events and book tickets effortlessly with a modern platform that brings event organizers and enthusiastic attendees together.
+            Discover unforgettable experiences, explore exciting events, and book your tickets with ease—all in one place. Ticketo connects passionate event organizers with people looking to make every moment memorable.
           </p>
           <div className="flex gap-4 text-slate-400">
             <a href="#" className="hover:text-pink-500 transition-colors"><FaFacebook size={18} /></a>
