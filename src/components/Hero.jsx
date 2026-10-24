@@ -14,7 +14,7 @@ const Hero = () => {
                 <div
                     className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-pink-500/30 bg-pink-600/5 text-pink-400 text-xs font-semibold uppercase tracking-wider"
                 >
-                    <FaRocket /> Introducing Ticketo v3.00
+                    <FaRocket /> Introducing Ticketos v3.00
                 </div>
  
                 <h1
@@ -53,7 +53,7 @@ const Hero = () => {
                             className="border-white/10 hover:bg-white/5 hover:border-white/20 text-white font-semibold h-14 px-8 text-md w-full sm:w-auto border-2"
                             radius="full"
                         >
-                            Create Organization
+                            Create Organizations
                         </Button>
                     </Link>
                 </div>
