@@ -4,7 +4,7 @@ const OrganizationForm = () => {
             <Card className="border border-white/5 bg-slate-900/40 backdrop-blur-xl shadow-2xl rounded-2xl" radius="lg">
                 <CardHeader className="flex flex-col gap-1 pb-4 border-b border-white/5 p-6">
                     <h3 className="text-xl font-bold text-white">Organization Details</h3>
-                    <p className="text-slate-400 text-xs">Review and edit your organization credentials.</p>
+                    <p className="text-slate-400 text-xs"> Manage and edit your organization information </p>
                 </CardHeader>
                 <div className="p-6">
                     <Form className="space-y-4 w-full">
