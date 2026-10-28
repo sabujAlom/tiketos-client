@@ -21,7 +21,8 @@ export default function PremiumSuccessPage() {
                         <Spinner size="lg" color="secondary" />
                         <h1 className="text-xl font-bold text-white mt-2">Verifying Upgrade Session...</h1>
                         <p className="text-slate-400 text-xs max-w-xs leading-relaxed">
-                            We are connecting with Stripe to finalize your premium organizer upgrade. Do not refresh.
+                            
+                            We’re securely connecting to Stripe to complete your premium organizer upgrade. Please keep this page open and don’t refresh.
                         </p>
                     </CardBody>
                 )}
